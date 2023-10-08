@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
  
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).text(' 1  1  1  1  1  1  -1  -1  -1  -1 ');
+  if (req.method) {
+    res.status(200).text(' 1  1  1  1  1  1  -1  -1  -1  -1 ');
+  }
 }
