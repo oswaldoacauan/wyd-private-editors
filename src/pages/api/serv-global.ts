@@ -1,7 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
  
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method) {
-    res.status(200).write(' 1  1  1  1  1  1  -1  -1  -1  -1 ');
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end(" 1  1  1  1  1  1  -1  -1  -1  -1 ");
   }
 }
